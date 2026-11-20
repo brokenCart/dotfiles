@@ -51,7 +51,7 @@ tooltip label {
 }
 
 /* modules inside the status group share one pill */
-#idle_inhibitor, #network, #bluetooth, #battery {
+#idle_inhibitor, #battery {
     background: transparent;
     padding: 0 8px;
     margin: 0;
@@ -101,14 +101,6 @@ window#waybar.empty #window { background: transparent; }
 
 #battery.charging,
 #battery.plugged { color: @accent; }
-
-#bluetooth.off,
-#bluetooth.disabled { color: @muted; }
-#bluetooth.connected { color: @accent; }
-
-#network.disconnected,
-#network.disabled,
-#network.linked { color: @muted; }
 
 #battery.warning:not(.charging) { color: @warn; }
 

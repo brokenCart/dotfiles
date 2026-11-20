@@ -10,7 +10,7 @@ Arch Linux + Hyprland rice, themed end to end in **Catppuccin Mocha** with a sky
 | **Notifications** | dunst |
 | **OSD** | SwayOSD (volume / brightness pop-ups) |
 | **Power menu** | wlogout |
-| **Wi-Fi / Bluetooth** | networkmanager-dmenu (in wofi) / Overskride, opened from waybar |
+| **Wi-Fi / Bluetooth** | nm-applet / blueman, in the waybar tray |
 | **Screenshots** | grim + slurp → satty |
 | **Terminal** | kitty |
 | **Shell** | bash + starship, eza, bat, fzf, zoxide |
@@ -41,7 +41,6 @@ starship/   → ~/.config/starship.toml
 bash/       → ~/.bashrc, ~/.bash_profile
 kde-colors/ → ~/.local/share/color-schemes   (Catppuccin Mocha Sky scheme for Dolphin & other KDE apps)
 cursor/     → ~/.local/share/icons/default   (fallback cursor theme)
-networkmanager-dmenu/ → ~/.config/networkmanager-dmenu   (Wi-Fi menu shown in wofi)
 ```
 
 ## Install
@@ -52,8 +51,8 @@ sudo pacman -S --needed hyprland hypridle hyprlock hyprpaper waybar kitty wofi d
   swayosd satty grim slurp cliphist wl-clipboard brightnessctl playerctl \
   adw-gtk-theme kvantum qt6ct papirus-icon-theme ttf-jetbrains-mono-nerd \
   starship eza bat fzf zoxide fd bash-completion fastfetch stow \
-  bluez bluez-utils networkmanager-dmenu
-yay -S --needed wlogout kvantum-theme-catppuccin-git catppuccin-cursors-mocha overskride-bin
+  bluez bluez-utils network-manager-applet blueman
+yay -S --needed wlogout kvantum-theme-catppuccin-git catppuccin-cursors-mocha
 
 # link everything (back up any existing configs first)
 git clone https://github.com/brokenCart/dotfiles ~/dotfiles

@@ -49,8 +49,10 @@ local menu = "wofi --show drun"
 -- Autostart necessary processes (like notifications daemons, status bars, etc.)
 -- Or execute your favorite apps at launch like this:
 --
-hl.on("hyprland.start", function () 
+hl.on("hyprland.start", function ()
   hl.exec_cmd("waybar")
+  hl.exec_cmd("nm-applet")        -- Wi-Fi tray icon + menu
+  hl.exec_cmd("blueman-applet")   -- Bluetooth tray icon + menu
   hl.exec_cmd("wl-paste --watch cliphist store")
   hl.exec_cmd("hyprpaper")
   hl.exec_cmd("swayosd-server")   -- volume/brightness pop-up
@@ -404,7 +406,6 @@ hl.window_rule({
 local floatCenter = {
     "^(org\\.pulseaudio\\.pavucontrol|pavucontrol)$",
     "^(nm-connection-editor|blueman-manager|\\.blueman-manager-wrapped)$",
-    "^(io\\.github\\.kaii_lb\\.Overskride|overskride)$",  -- Bluetooth GUI opened from waybar
     "^(xdg-desktop-portal-gtk|org\\.freedesktop\\.impl\\.portal\\..*)$",
     "^(qt6ct|kvantummanager|nwg-look)$",
     "^(org\\.kde\\.ark|file-roller|org\\.gnome\\.FileRoller)$",
