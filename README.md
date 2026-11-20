@@ -63,7 +63,11 @@ gsettings set org.gnome.desktop.interface cursor-theme 'catppuccin-mocha-dark-cu
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 ```
 
-Not included: the wallpaper (`hypr/.config/hypr/hyprpaper.conf` points at `~/Pictures/Wallpapers/`), and the SDDM cursor setting in `/etc/sddm.conf.d/theme.conf` (`CursorTheme=catppuccin-mocha-dark-cursors`).
+### Wallpaper
+
+[wallhaven-yqkl97](https://wallhaven.cc/w/yqkl97) from Wallhaven. Download it to `~/Pictures/Wallpapers/wallhaven-yqkl97.jpg`, which is where `hypr/.config/hypr/hyprpaper.conf` looks for it.
+
+Not included: the SDDM cursor setting in `/etc/sddm.conf.d/theme.conf` (`CursorTheme=catppuccin-mocha-dark-cursors`).
 
 ## Keybinds
 
