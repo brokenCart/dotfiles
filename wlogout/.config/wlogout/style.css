@@ -43,12 +43,10 @@ button:hover {
 
 #lock     { background-image: image(url("icons/lock-normal.svg")); }
 #logout   { background-image: image(url("icons/logout-normal.svg")); }
-#suspend  { background-image: image(url("icons/suspend-normal.svg")); }
 #reboot   { background-image: image(url("icons/reboot-normal.svg")); }
 #shutdown { background-image: image(url("icons/shutdown-normal.svg")); }
 
 #lock:focus,     #lock:hover     { background-image: image(url("icons/lock-hover.svg")); }
 #logout:focus,   #logout:hover   { background-image: image(url("icons/logout-hover.svg")); }
-#suspend:focus,  #suspend:hover  { background-image: image(url("icons/suspend-hover.svg")); }
 #reboot:focus,   #reboot:hover   { background-image: image(url("icons/reboot-hover.svg")); }
 #shutdown:focus, #shutdown:hover { background-image: image(url("icons/shutdown-danger.svg")); }

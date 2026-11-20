@@ -309,8 +309,13 @@ hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen({ mode = "maximized"
 -- Lock screen (goes through hypridle's lock_cmd → hyprlock)
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("loginctl lock-session"))
 
+-- Lid: never suspend (logind ignores the lid via /etc/systemd/logind.conf.d/no-lid-suspend.conf).
+-- Closing locks and blanks the screen; opening turns it back on.
+hl.bind("switch:on:Lid Switch",  hl.dsp.exec_cmd("loginctl lock-session; sleep 0.5; hyprctl dispatch 'hl.dsp.dpms(\"off\")'"), { locked = true })
+hl.bind("switch:off:Lid Switch", hl.dsp.exec_cmd("hyprctl dispatch 'hl.dsp.dpms(\"on\")'"),                                       { locked = true })
+
 -- Power menu
-hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd("pidof wlogout || wlogout -b 5 -T 260 -B 260 -L 80 -R 80"))
+hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd("pidof wlogout || wlogout -b 4 -T 260 -B 260 -L 200 -R 200"))
 
 -- Clipboard history picker (cliphist is already recording in autostart)
 hl.bind(mainMod .. " + SHIFT + V", hl.dsp.exec_cmd("cliphist list | wofi --dmenu --prompt 'Clipboard' | cliphist decode | wl-copy"))

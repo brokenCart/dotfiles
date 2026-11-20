@@ -67,7 +67,22 @@ gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 
 [wallhaven-yqkl97](https://wallhaven.cc/w/yqkl97) from Wallhaven. Download it to `~/Pictures/Wallpapers/wallhaven-yqkl97.jpg`, which is where `hypr/.config/hypr/hyprpaper.conf` looks for it.
 
-Not included: the SDDM cursor setting in `/etc/sddm.conf.d/theme.conf` (`CursorTheme=catppuccin-mocha-dark-cursors`).
+### System settings (in `/etc`, not stowed)
+
+Suspend is disabled on purpose: there's no suspend button in wlogout or waybar, hypridle never suspends, and closing the lid locks and blanks the screen instead (see the `Lid Switch` binds in `hyprland.lua`). That last part needs logind told to ignore the lid:
+
+```bash
+sudo mkdir -p /etc/systemd/logind.conf.d
+printf '[Login]\nHandleLidSwitch=ignore\nHandleLidSwitchExternalPower=ignore\nHandleLidSwitchDocked=ignore\n' \
+  | sudo tee /etc/systemd/logind.conf.d/no-lid-suspend.conf
+sudo systemctl kill -s HUP systemd-logind
+```
+
+SDDM login-screen cursor, in `/etc/sddm.conf.d/theme.conf`:
+
+```ini
+CursorTheme=catppuccin-mocha-dark-cursors
+```
 
 ## Keybinds
 

@@ -88,13 +88,12 @@
         "format": "⏻",
         "tooltip": false,
         // Left click: full-screen wlogout power menu (same as Super+Escape)
-        "on-click": "pidof wlogout || wlogout -b 5 -T 260 -B 260 -L 80 -R 80",
+        "on-click": "pidof wlogout || wlogout -b 4 -T 260 -B 260 -L 200 -R 200",
         // Right click: the old compact dropdown
         "menu": "on-click-right",
         "menu-file": "$HOME/.config/waybar/power_menu.xml",
         "menu-actions": {
             "lock": "loginctl lock-session",
-            "suspend": "systemctl suspend",
             "logout": "hyprctl dispatch 'hl.dsp.exit()'",
             "reboot": "systemctl reboot",
             "shutdown": "systemctl poweroff"
