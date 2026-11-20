@@ -1,0 +1,12 @@
+# backups and editor junk
+*.bak
+*.bak-*
+*~
+*.swp
+.DS_Store
+
+# written by apps at runtime, not config
+gtk/.config/gtk-3.0/bookmarks
+gtk/.config/gtk-4.0/bookmarks
+qt6ct/.config/qt6ct/colors/
+qt6ct/.config/qt6ct/qss/

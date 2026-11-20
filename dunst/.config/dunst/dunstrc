@@ -1,0 +1,86 @@
+# Dunst — styled to match waybar/wofi (Catppuccin-ish palette, cyan accent)
+
+[global]
+    ### Geometry ###
+    follow = mouse
+    origin = top-right
+    # (horizontal, vertical) distance from the screen edge.
+    # 12 lines up with waybar's side margin; 6 sits just under the bar.
+    offset = (12, 6)
+    width = (280, 380)
+    height = (0, 220)
+    notification_limit = 5
+    gap_size = 6
+    layer = overlay
+
+    ### Progress bar ###
+    progress_bar = true
+    progress_bar_height = 6
+    progress_bar_frame_width = 0
+    progress_bar_min_width = 150
+    progress_bar_max_width = 380
+    progress_bar_corner_radius = 3
+    highlight = "#89dceb"
+
+    ### Look ###
+    transparency = 0
+    separator_height = 0
+    padding = 12
+    horizontal_padding = 14
+    text_icon_padding = 12
+    frame_width = 2
+    frame_color = "#89dceb"
+    separator_color = frame
+    corner_radius = 12
+    sort = yes
+    idle_threshold = 120
+
+    ### Text ###
+    font = JetBrainsMono Nerd Font Propo 10
+    line_height = 2
+    markup = full
+    format = "<b>%s</b>\n%b"
+    alignment = left
+    vertical_alignment = center
+    show_age_threshold = 60
+    ellipsize = end
+    ignore_newline = no
+    stack_duplicates = true
+    hide_duplicate_count = false
+    show_indicators = no
+
+    ### Icons ###
+    enable_recursive_icon_lookup = true
+    icon_position = left
+    min_icon_size = 32
+    max_icon_size = 48
+
+    ### Behaviour ###
+    sticky_history = yes
+    history_length = 20
+    browser = /usr/bin/xdg-open
+    always_run_script = true
+    mouse_left_click = do_action, close_current
+    mouse_middle_click = close_all
+    mouse_right_click = close_current
+
+[urgency_low]
+    background = "#11111bf0"
+    foreground = "#a6adc8"
+    frame_color = "#45475a"
+    highlight = "#7f849c"
+    timeout = 4
+
+[urgency_normal]
+    background = "#11111bf0"
+    foreground = "#cdd6f4"
+    frame_color = "#89dceb"
+    highlight = "#89dceb"
+    timeout = 6
+
+[urgency_critical]
+    background = "#11111bf0"
+    foreground = "#cdd6f4"
+    frame_color = "#f38ba8"
+    highlight = "#f38ba8"
+    timeout = 0

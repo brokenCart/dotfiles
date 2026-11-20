@@ -1,0 +1,185 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "source": "arch",
+    "padding": {
+      "top": 2,
+      "left": 2,
+      "right": 4
+    },
+    "color": {
+      "1": "38;2;137;180;250",
+      "2": "38;2;137;180;250"
+    }
+  },
+  "display": {
+    "separator": "  ",
+    "key": {
+      "width": 14
+    },
+    "color": {
+      "keys": "38;2;137;180;250",
+      "output": "38;2;205;214;244"
+    },
+    "size": {
+      "binaryPrefix": "iec",
+      "ndigits": 1
+    },
+    "percent": {
+      "type": 3,
+      "color": {
+        "green": "38;2;166;227;161",
+        "yellow": "38;2;249;226;175",
+        "red": "38;2;243;139;168"
+      }
+    },
+    "bar": {
+      "width": 12,
+      "char": {
+        "elapsed": "■",
+        "total": "·"
+      }
+    }
+  },
+  "modules": [
+    {
+      "type": "title",
+      "format": "\u001b[38;2;203;166;247;1m{user-name}\u001b[0m\u001b[38;2;108;112;134m@\u001b[38;2;137;180;250;1m{host-name}\u001b[0m"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[38;2;203;166;247m┌── \u001b[1mSystem\u001b[22m ──────────────────────┐\u001b[0m"
+    },
+    {
+      "type": "os",
+      "key": "   OS",
+      "keyColor": "38;2;203;166;247",
+      "format": "{pretty-name} {arch}"
+    },
+    {
+      "type": "kernel",
+      "key": "   Kernel",
+      "keyColor": "38;2;203;166;247",
+      "format": "{release}"
+    },
+    {
+      "type": "uptime",
+      "key": "   Uptime",
+      "keyColor": "38;2;203;166;247"
+    },
+    {
+      "type": "packages",
+      "key": " 󰏗  Packages",
+      "keyColor": "38;2;203;166;247"
+    },
+    {
+      "type": "shell",
+      "key": "   Shell",
+      "keyColor": "38;2;203;166;247"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[38;2;108;112;134m└────────────────────────────────┘\u001b[0m"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[38;2;245;194;231m┌── \u001b[1mDesktop\u001b[22m ─────────────────────┐\u001b[0m"
+    },
+    {
+      "type": "wm",
+      "key": "   WM",
+      "keyColor": "38;2;245;194;231"
+    },
+    {
+      "type": "terminal",
+      "key": "   Terminal",
+      "keyColor": "38;2;245;194;231"
+    },
+    {
+      "type": "terminalfont",
+      "key": "   Font",
+      "keyColor": "38;2;245;194;231"
+    },
+    {
+      "type": "display",
+      "key": " 󰍹  Display",
+      "keyColor": "38;2;245;194;231",
+      "format": "{width}x{height} @ {refresh-rate}Hz"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[38;2;108;112;134m└────────────────────────────────┘\u001b[0m"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[38;2;137;180;250m┌── \u001b[1mHardware\u001b[22m ────────────────────┐\u001b[0m"
+    },
+    {
+      "type": "host",
+      "key": " 󰌢  Host",
+      "keyColor": "38;2;137;180;250"
+    },
+    {
+      "type": "cpu",
+      "key": "   CPU",
+      "keyColor": "38;2;137;180;250",
+      "temp": true,
+      "format": "{name} ({cores-logical}) @ {freq-max}  {temperature}"
+    },
+    {
+      "type": "gpu",
+      "key": " 󰢮  GPU",
+      "keyColor": "38;2;137;180;250",
+      "format": "{name}"
+    },
+    {
+      "type": "memory",
+      "key": " 󰍛  Memory",
+      "keyColor": "38;2;137;180;250",
+      "format": "{used} / {total}  {percentage-bar} {percentage}"
+    },
+    {
+      "type": "swap",
+      "key": " 󰓡  Swap",
+      "keyColor": "38;2;137;180;250",
+      "format": "{used} / {total}  {percentage}"
+    },
+    {
+      "type": "disk",
+      "key": " 󰋊  Disk",
+      "keyColor": "38;2;137;180;250",
+      "folders": "/",
+      "format": "{size-used} / {size-total}  {size-percentage-bar} {size-percentage}"
+    },
+    {
+      "type": "battery",
+      "key": " 󰁹  Battery",
+      "keyColor": "38;2;137;180;250",
+      "format": "{capacity}  {status}"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[38;2;108;112;134m└────────────────────────────────┘\u001b[0m"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[38;2;148;226;213m┌── \u001b[1mNetwork\u001b[22m ─────────────────────┐\u001b[0m"
+    },
+    {
+      "type": "localip",
+      "key": " 󰩟  Local IP",
+      "keyColor": "38;2;148;226;213",
+      "showIpv4": true,
+      "compact": true
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[38;2;108;112;134m└────────────────────────────────┘\u001b[0m"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "  \u001b[38;2;243;139;168m● \u001b[38;2;250;179;135m● \u001b[38;2;249;226;175m● \u001b[38;2;166;227;161m● \u001b[38;2;148;226;213m● \u001b[38;2;137;180;250m● \u001b[38;2;203;166;247m● \u001b[38;2;245;194;231m●\u001b[0m"
+    }
+  ]
+}

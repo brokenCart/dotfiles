@@ -1,0 +1,26 @@
+# satty — screenshot annotation (opened by Print / Shift+Print / Super+Shift+Z)
+# Enter = copy to clipboard and close · Ctrl+S = save · Esc = close
+
+[general]
+fullscreen = false
+early-exit = true
+corner-roundness = 12
+initial-tool = "arrow"
+copy-command = "wl-copy"
+annotation-size-factor = 1.5
+output-filename = "/home/yatharth/Pictures/Screenshots/%Y-%m-%d_%H-%M-%S.png"
+save-after-copy = false
+default-hide-toolbars = false
+primary-highlighter = "block"
+disable-notifications = false
+actions-on-enter = ["save-to-clipboard"]
+actions-on-escape = ["exit"]
+no-window-decoration = true
+
+[font]
+family = "JetBrainsMono Nerd Font"
+style = "Bold"
+
+# Catppuccin Mocha
+[color-palette]
+palette = ["#f38ba8", "#fab387", "#f9e2af", "#a6e3a1", "#89dceb", "#cba6f7", "#cdd6f4", "#11111b"]

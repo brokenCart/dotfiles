@@ -1,0 +1,27 @@
+# ~/.config/wofi/config — matches the waybar palette (Catppuccin Mocha + cyan accent)
+
+show=drun
+prompt=Search…
+width=560
+height=420
+location=center
+columns=1
+lines=8
+
+# Behaviour
+insensitive=true
+matching=fuzzy
+no_actions=true
+hide_scroll=true
+allow_markup=true
+term=kitty
+
+# Icons
+allow_images=true
+image_size=28
+gtk_dark=true
+
+# Keys
+key_up=Up,Control_L-k
+key_down=Down,Control_L-j
+key_exit=Escape

@@ -1,0 +1,54 @@
+/* wlogout — Catppuccin Mocha, matches waybar/wofi/hyprlock
+   Cards stay dark in every state; hover/focus lights up the border, icon and text
+   so they're always readable. Icons are recolored Papirus symbolics in ./icons. */
+
+* {
+    font-family: "JetBrainsMono Nerd Font Propo", "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    background-image: none;
+    box-shadow: none;
+    transition: all 0.15s ease;
+}
+
+window {
+    background-color: rgba(17, 17, 27, 0.6);
+}
+
+button {
+    color: #cdd6f4;
+    background-color: rgba(24, 24, 37, 0.92);
+    border: 2px solid rgba(69, 71, 90, 0.9);
+    border-radius: 20px;
+    margin: 10px;
+    background-repeat: no-repeat;
+    background-position: center 40%;
+    background-size: 42%;
+    padding-top: 100px;
+}
+
+button:focus,
+button:hover {
+    color: #89dceb;
+    background-color: rgba(49, 50, 68, 0.95);
+    border-color: #89dceb;
+    background-size: 46%;
+}
+
+#shutdown:focus,
+#shutdown:hover {
+    color: #f38ba8;
+    border-color: #f38ba8;
+}
+
+#lock     { background-image: image(url("icons/lock-normal.svg")); }
+#logout   { background-image: image(url("icons/logout-normal.svg")); }
+#suspend  { background-image: image(url("icons/suspend-normal.svg")); }
+#reboot   { background-image: image(url("icons/reboot-normal.svg")); }
+#shutdown { background-image: image(url("icons/shutdown-normal.svg")); }
+
+#lock:focus,     #lock:hover     { background-image: image(url("icons/lock-hover.svg")); }
+#logout:focus,   #logout:hover   { background-image: image(url("icons/logout-hover.svg")); }
+#suspend:focus,  #suspend:hover  { background-image: image(url("icons/suspend-hover.svg")); }
+#reboot:focus,   #reboot:hover   { background-image: image(url("icons/reboot-hover.svg")); }
+#shutdown:focus, #shutdown:hover { background-image: image(url("icons/shutdown-danger.svg")); }
