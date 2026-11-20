@@ -87,6 +87,12 @@ SDDM login-screen cursor, in `/etc/sddm.conf.d/theme.conf`:
 CursorTheme=catppuccin-mocha-dark-cursors
 ```
 
+Cloudflare WARP tray icon (`cloudflare-warp-bin`). The VPN daemon `warp-svc` starts at boot, but the tray app's login unit ships disabled, and Hyprland doesn't run desktop autostart entries:
+
+```bash
+systemctl --user enable --now warp-taskbar
+```
+
 ## Keybinds
 
 | Keys | Action |
