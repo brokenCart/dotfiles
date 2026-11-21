@@ -35,8 +35,11 @@
     // ---------- Center ----------
     "clock": {
         "format": "{:%a %d %b  %H:%M}",
-        "format-alt": "{:%Y-%m-%d  %H:%M:%S}",
-        "interval": 1,
+        "format-alt": "{:%Y-%m-%d  %H:%M}",
+        // Keep at 60: the clock re-sets its calendar tooltip on every tick, and in
+        // GTK3 that re-queries tooltips bar-wide, resetting every module's hover
+        // delay. interval 1 made tooltips randomly fail to appear.
+        "interval": 60,
         "tooltip-format": "<tt>{calendar}</tt>",
         "calendar": {
             "mode": "month",
