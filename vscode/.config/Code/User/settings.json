@@ -1,0 +1,178 @@
+{
+  // ─────────────────────────────────────────────────────────────
+  //  VS Code — Catppuccin Mocha, matched to kitty / Waybar / Hyprland
+  //  base #11111b · accent sky #89dceb · JetBrainsMono Nerd Font
+  // ─────────────────────────────────────────────────────────────
+
+  // ---------- Theme ----------
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.iconTheme": "catppuccin-mocha",
+  "catppuccin.accentColor": "sky",
+  "catppuccin.workbenchMode": "flat",
+  "catppuccin.bracketMode": "rainbow",
+  "catppuccin.italicComments": true,
+  "catppuccin.italicKeywords": false,
+  "catppuccin.boldKeywords": true,
+  // same deep "crust" background as kitty (#11111b)
+  "catppuccin.colorOverrides": {
+    "mocha": {
+      "base": "#11111b",
+      "mantle": "#0e0e16",
+      "crust": "#0b0b12"
+    }
+  },
+  "catppuccin.customUIColors": {
+    "mocha": {
+      "focusBorder": "accent 0.6",
+      "editorCursor.foreground": "accent",
+      "terminalCursor.foreground": "accent",
+      "editor.selectionBackground": "accent 0.25",
+      "terminal.selectionBackground": "accent 0.35",
+      "scrollbarSlider.background": "accent 0.25",
+      "scrollbarSlider.hoverBackground": "accent 0.4",
+      "scrollbarSlider.activeBackground": "accent 0.5",
+      "tab.activeBorderTop": "accent",
+      "tab.activeBorder": "#00000000",
+      "statusBar.background": "crust",
+      "statusBarItem.remoteBackground": "accent",
+      "statusBarItem.remoteForeground": "crust",
+      "editorGroup.border": "surface0",
+      "panel.border": "surface0",
+      "sideBar.border": "surface0",
+      "widget.border": "surface0"
+    }
+  },
+
+  // ---------- Fonts ----------
+  "editor.fontFamily": "'JetBrainsMono Nerd Font', 'JetBrains Mono', monospace",
+  "editor.fontSize": 15,
+  "editor.lineHeight": 1.55,
+  "editor.fontLigatures": true,
+  "editor.fontWeight": "400",
+  "editor.inlayHints.fontFamily": "'JetBrainsMono Nerd Font'",
+  "debug.console.fontFamily": "'JetBrainsMono Nerd Font'",
+  "chat.editor.fontFamily": "'JetBrainsMono Nerd Font'",
+  "markdown.preview.fontFamily": "'JetBrainsMono Nerd Font Propo', sans-serif",
+
+  // ---------- Cursor (beam + smooth, like kitty) ----------
+  "editor.cursorStyle": "line",
+  "editor.cursorWidth": 2,
+  "editor.cursorBlinking": "phase",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.smoothScrolling": true,
+  "workbench.list.smoothScrolling": true,
+
+  // ---------- Editor look ----------
+  "editor.padding.top": 10,
+  "editor.padding.bottom": 10,
+  "editor.minimap.enabled": false,
+  "editor.renderLineHighlight": "all",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.stickyScroll.enabled": true,
+  "editor.scrollbar.verticalScrollbarSize": 8,
+  "editor.scrollbar.horizontalScrollbarSize": 8,
+  "editor.renderWhitespace": "trailing",
+  "editor.semanticHighlighting.enabled": true,
+  "editor.linkedEditing": true,
+  "editor.inlayHints.enabled": "onUnlessPressed",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+
+  // ---------- Window / workbench (no decorations under Hyprland) ----------
+  "window.titleBarStyle": "custom",
+  "window.menuBarVisibility": "toggle",
+  "window.commandCenter": true,
+  "window.title": "${rootName}${separator}${activeEditorShort}",
+  "workbench.startupEditor": "none",
+  "workbench.tree.indent": 14,
+  "workbench.tree.renderIndentGuides": "always",
+  "workbench.editor.tabActionLocation": "right",
+  "workbench.layoutControl.enabled": false,
+  "breadcrumbs.enabled": true,
+
+  // ---------- Integrated terminal (mirrors kitty.conf) ----------
+  "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font'",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.lineHeight": 1.15,
+  "terminal.integrated.fontLigatures.enabled": true,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.cursorWidth": 2,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.scrollback": 10000,
+  "terminal.integrated.smoothScrolling": true,
+  "terminal.integrated.enableVisualBell": false,
+  "terminal.integrated.defaultProfile.linux": "bash",
+
+  // ---------- Formatting ----------
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
+
+  // ---------- C / C++ (clangd + CodeLLDB + CMake) ----------
+  "clangd.path": "/usr/bin/clangd",
+  "clangd.arguments": [
+    "--background-index",
+    "--clang-tidy",
+    "--header-insertion=iwyu",
+    "--completion-style=detailed",
+    "--function-arg-placeholders"
+  ],
+  "cmake.generator": "Ninja",
+  "cmake.configureOnOpen": false,
+  "cmake.copyCompileCommands": "${workspaceFolder}/compile_commands.json",
+  "[c]": { "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd" },
+  "[cpp]": { "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd" },
+
+  // ---------- JavaScript / TypeScript ----------
+  "prettier.singleQuote": false,
+  "eslint.useFlatConfig": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[javascriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[jsonc]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[css]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+
+  // ---------- Python (Pylance + Ruff + debugpy) ----------
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.terminal.activateEnvironment": true,
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports.ruff": "explicit",
+      "source.fixAll.ruff": "explicit"
+    }
+  },
+
+  // ---------- Go (system gopls / dlv / golangci-lint) ----------
+  "go.useLanguageServer": true,
+  "go.toolsManagement.checkForUpdates": "off",
+  "go.alternateTools": {
+    "gopls": "/usr/bin/gopls",
+    "dlv": "/usr/bin/dlv"
+  },
+  "go.lintTool": "golangci-lint",
+  "go.lintOnSave": "package",
+  "gopls": {
+    "ui.semanticTokens": true,
+    "ui.inlayhint.hints": {
+      "parameterNames": true,
+      "assignVariableTypes": true
+    }
+  },
+  "[go]": {
+    "editor.defaultFormatter": "golang.go",
+    "editor.codeActionsOnSave": { "source.organizeImports": "explicit" }
+  },
+
+  // ---------- Misc ----------
+  "telemetry.telemetryLevel": "off",
+  "update.mode": "none",
+  "extensions.ignoreRecommendations": false
+}

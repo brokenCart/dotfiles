@@ -21,6 +21,19 @@ Arch Linux + Hyprland rice, themed end to end in **Catppuccin Mocha** with a sky
 | **Icons** | Papirus-Dark |
 | **Font** | JetBrainsMono Nerd Font |
 
+### Dev tools
+
+| | |
+|---|---|
+| **Editors** | VS Code (`$VISUAL`, Catppuccin Mocha sky to match the rice), Neovim, Claude Desktop |
+| **VCS** | git, GitHub CLI (`gh`) |
+| **Containers** | Docker + buildx + compose |
+| **C / C++** | gcc (base-devel), clang, cmake, ninja, bear, lldb, valgrind |
+| **Python** | uv, pipx, pip, ipython, pytest, ruff, pyright, debugpy |
+| **Go** | go, gopls, delve, golangci-lint, staticcheck, go-tools |
+| **JS / TS** | Node.js, npm, pnpm, TypeScript, ESLint, Prettier |
+| **Neovim LSPs** (Mason) | lua_ls, bashls, clangd, basedpyright, gopls, jsonls, ts_ls |
+
 ## Layout
 
 Each top-level folder is a [GNU Stow](https://www.gnu.org/software/stow/) package that mirrors `$HOME`:
@@ -30,6 +43,7 @@ hypr/       → ~/.config/hypr          (hyprland.lua, hypridle, hyprlock, hyprp
 waybar/     → ~/.config/waybar
 kitty/      → ~/.config/kitty
 nvim/       → ~/.config/nvim          (lazy.nvim; plugins install on first launch)
+vscode/     → ~/.config/Code/User/settings.json
 wofi/       → ~/.config/wofi
 dunst/      → ~/.config/dunst
 fastfetch/  → ~/.config/fastfetch
@@ -57,8 +71,28 @@ sudo pacman -S --needed hyprland hypridle hyprlock hyprpaper waybar kitty wofi d
   neovim unzip tree-sitter-cli luarocks ripgrep
 yay -S --needed wlogout kvantum-theme-catppuccin-git catppuccin-cursors-mocha
 
+# dev tools
+sudo pacman -S --needed base-devel git github-cli docker docker-buildx docker-compose \
+  clang cmake ninja bear lldb valgrind \
+  uv python-pip python-pipx ipython python-pytest ruff pyright python-debugpy \
+  go gopls delve golangci-lint staticcheck go-tools \
+  nodejs npm pnpm typescript eslint prettier
+yay -S --needed visual-studio-code-bin claude-desktop
+sudo systemctl enable --now docker
+# optional: run docker without sudo (log out and back in afterwards)
+sudo usermod -aG docker "$USER"
+
+# VS Code extensions
+for ext in catppuccin.catppuccin-vsc catppuccin.catppuccin-vsc-icons \
+  llvm-vs-code-extensions.vscode-clangd ms-vscode.cmake-tools vadimcn.vscode-lldb \
+  ms-python.python ms-python.vscode-pylance ms-python.debugpy ms-python.vscode-python-envs \
+  charliermarsh.ruff golang.go dbaeumer.vscode-eslint esbenp.prettier-vscode; do
+  code --install-extension "$ext"
+done
+
 # link everything (back up any existing configs first)
 git clone https://github.com/brokenCart/dotfiles ~/dotfiles
+mkdir -p ~/.config/Code/User   # so stow links only settings.json, not VS Code's whole state dir
 cd ~/dotfiles && stow */
 
 # GTK settings that live in dconf
