@@ -13,6 +13,7 @@ Arch Linux + Hyprland rice, themed end to end in **Catppuccin Mocha** with a sky
 | **Wi-Fi / Bluetooth** | nm-applet / blueman, in the waybar tray |
 | **Screenshots** | grim + slurp → satty |
 | **Terminal** | kitty |
+| **Editor** | Neovim (lazy.nvim, Catppuccin, snacks, blink.cmp, Mason LSP) |
 | **Shell** | bash + starship, eza, bat, fzf, zoxide |
 | **GTK** | adw-gtk3-dark + Catppuccin colour overrides |
 | **Qt** | Kvantum `catppuccin-mocha-sky` via qt6ct |
@@ -28,6 +29,7 @@ Each top-level folder is a [GNU Stow](https://www.gnu.org/software/stow/) packag
 hypr/       → ~/.config/hypr          (hyprland.lua, hypridle, hyprlock, hyprpaper, scripts/)
 waybar/     → ~/.config/waybar
 kitty/      → ~/.config/kitty
+nvim/       → ~/.config/nvim          (lazy.nvim; plugins install on first launch)
 wofi/       → ~/.config/wofi
 dunst/      → ~/.config/dunst
 fastfetch/  → ~/.config/fastfetch
@@ -51,7 +53,8 @@ sudo pacman -S --needed hyprland hypridle hyprlock hyprpaper waybar kitty wofi d
   swayosd satty grim slurp cliphist wl-clipboard brightnessctl playerctl \
   adw-gtk-theme kvantum qt6ct papirus-icon-theme ttf-jetbrains-mono-nerd \
   starship eza bat fzf zoxide fd bash-completion fastfetch stow \
-  bluez bluez-utils network-manager-applet blueman
+  bluez bluez-utils network-manager-applet blueman \
+  neovim unzip tree-sitter-cli luarocks ripgrep
 yay -S --needed wlogout kvantum-theme-catppuccin-git catppuccin-cursors-mocha
 
 # link everything (back up any existing configs first)

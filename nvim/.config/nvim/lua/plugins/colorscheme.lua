@@ -1,0 +1,61 @@
+-- Catppuccin Mocha, transparent so kitty's opacity + blur show through,
+-- with sky (#89dceb) as the accent to match the rest of the rice.
+return {
+  "catppuccin/nvim",
+  name = "catppuccin",
+  lazy = false,
+  priority = 1000,
+  opts = {
+    flavour = "mocha",
+    transparent_background = true,
+    float = { transparent = true, solid = false },
+    term_colors = true,
+    dim_inactive = { enabled = false },
+    styles = {
+      comments = { "italic" },
+      conditionals = { "italic" },
+      keywords = { "italic" },
+    },
+    auto_integrations = true,
+    custom_highlights = function(c)
+      return {
+        CursorLine = { bg = c.surface0 },
+        CursorLineNr = { fg = c.sky, style = { "bold" } },
+        LineNr = { fg = c.surface2 },
+        FloatBorder = { fg = c.sky },
+        FloatTitle = { fg = c.crust, bg = c.sky, style = { "bold" } },
+        WinSeparator = { fg = c.surface1 },
+        Visual = { bg = c.surface1, style = { "bold" } },
+        Search = { fg = c.crust, bg = c.sky },
+        IncSearch = { fg = c.crust, bg = c.peach },
+        CurSearch = { fg = c.crust, bg = c.peach },
+        MatchParen = { fg = c.sky, bg = c.surface1, style = { "bold" } },
+        Pmenu = { bg = c.mantle },
+        PmenuSel = { fg = c.crust, bg = c.sky, style = { "bold" } },
+        BlinkCmpMenuBorder = { fg = c.sky },
+        BlinkCmpDocBorder = { fg = c.sky },
+        BlinkCmpSignatureHelpBorder = { fg = c.sky },
+        SnacksDashboardHeader = { fg = c.sky },
+        SnacksDashboardIcon = { fg = c.sky },
+        SnacksDashboardKey = { fg = c.peach, style = { "bold" } },
+        SnacksDashboardFooter = { fg = c.overlay1, style = { "italic" } },
+        SnacksIndentScope = { fg = c.sky },
+        SnacksPickerBorder = { fg = c.sky },
+        SnacksPickerTitle = { fg = c.crust, bg = c.sky, style = { "bold" } },
+        SnacksPickerPrompt = { fg = c.sky },
+        SnacksPickerMatch = { fg = c.sky, style = { "bold" } },
+        WhichKeyBorder = { fg = c.sky },
+        WhichKeyTitle = { fg = c.crust, bg = c.sky, style = { "bold" } },
+        WhichKey = { fg = c.sky },
+        NoiceCmdlinePopupBorder = { fg = c.sky },
+        NoiceCmdlinePopupTitle = { fg = c.crust, bg = c.sky, style = { "bold" } },
+        NoiceCmdlineIcon = { fg = c.sky },
+        FlashLabel = { fg = c.crust, bg = c.peach, style = { "bold" } },
+      }
+    end,
+  },
+  config = function(_, opts)
+    require("catppuccin").setup(opts)
+    vim.cmd.colorscheme("catppuccin")
+  end,
+}
