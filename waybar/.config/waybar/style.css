@@ -26,17 +26,14 @@ tooltip {
     background: #11111b;
     opacity: 1;
     border: 1px solid @surface;
-    border-radius: 14px;
+    border-radius: 16px;
 }
-tooltip label {
-    color: @fg;
-    padding: 10px 14px;
-}
-
 /* calendar popup: monospace so the grid lines up */
 tooltip label {
+    color: @fg;
+    padding: 14px 18px;
     font-family: "JetBrainsMono Nerd Font Mono", "JetBrainsMono Nerd Font", monospace;
-    font-size: 14px;
+    font-size: 17px;
     font-weight: 500;
 }
 
