@@ -8,7 +8,7 @@
     "margin-right": 12,
     "spacing": 0,
 
-    "modules-left": ["hyprland/workspaces", "hyprland/submap", "hyprland/window"],
+    "modules-left": ["hyprland/workspaces", "hyprland/submap"],
     "modules-center": ["clock"],
     "modules-right": [
         "tray",
@@ -30,11 +30,6 @@
     },
     "hyprland/submap": {
         "format": "  {}"
-    },
-    "hyprland/window": {
-        "format": "{}",
-        "max-length": 50,
-        "separate-outputs": true
     },
 
     // ---------- Center ----------

@@ -88,8 +88,6 @@ tooltip label {
 
 #submap { color: @warn; }
 
-#window { color: @muted; }
-window#waybar.empty #window { background: transparent; }
 
 /* ---------- Clock ---------- */
 #clock { color: @accent; }
