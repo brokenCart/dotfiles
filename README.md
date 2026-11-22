@@ -2,6 +2,8 @@
 
 Arch Linux + Hyprland rice, themed end to end in **Catppuccin Mocha** with a sky (`#89dceb`) accent.
 
+![Desktop with waybar and the wallpaper](.github/screenshots/desktop.webp)
+
 | | |
 |---|---|
 | **WM** | Hyprland (Lua config) + hypridle / hyprlock / hyprpaper |
@@ -33,6 +35,19 @@ Arch Linux + Hyprland rice, themed end to end in **Catppuccin Mocha** with a sky
 | **Go** | go, gopls, delve, golangci-lint, staticcheck, go-tools |
 | **JS / TS** | Node.js, npm, pnpm, TypeScript, ESLint, Prettier |
 | **Neovim LSPs** (Mason) | lua_ls, bashls, clangd, basedpyright, gopls, jsonls, ts_ls |
+
+## Screenshots
+
+| | |
+|---|---|
+| ![kitty running fastfetch](.github/screenshots/fastfetch.webp) | ![wofi app launcher](.github/screenshots/wofi.webp) |
+| **kitty** + starship, with fastfetch | **wofi** launcher (`Super+R`) |
+| ![Neovim with the snacks explorer](.github/screenshots/nvim.webp) | ![Neovim dashboard](.github/screenshots/nvim-dashboard.webp) |
+| **Neovim**: snacks explorer, Catppuccin, lualine | **Neovim** dashboard |
+| ![dunst notifications and SwayOSD volume pop-up](.github/screenshots/notifications.webp) | ![wlogout power menu](.github/screenshots/wlogout.webp) |
+| **dunst** notifications + **SwayOSD** volume pop-up | **wlogout** power menu (`Super+Escape`) |
+| ![satty screenshot editor](.github/screenshots/satty.webp) | |
+| **satty** screenshot editor (`Print`) | |
 
 ## Layout
 
