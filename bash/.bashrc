@@ -120,3 +120,12 @@ if command -v starship >/dev/null; then
 else
     PS1='[\u@\h \W]\$ '
 fi
+
+# ── Go: binaries from `go install` (e.g. bootdev) ────────────────
+[[ ":$PATH:" != *":$HOME/go/bin:"* ]] && export PATH="$PATH:$HOME/go/bin"
+
+# ── opencode: CLI from the official installer ────────────────────
+[[ ":$PATH:" != *":$HOME/.opencode/bin:"* ]] && export PATH="$HOME/.opencode/bin:$PATH"
+
+# ── uv: tools and Pythons from `uv tool install` / `uv python install` ──
+[[ ":$PATH:" != *":$HOME/.local/bin:"* ]] && export PATH="$HOME/.local/bin:$PATH"
