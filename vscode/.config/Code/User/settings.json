@@ -174,5 +174,7 @@
   // ---------- Misc ----------
   "telemetry.telemetryLevel": "off",
   "update.mode": "none",
-  "extensions.ignoreRecommendations": false
+"extensions.ignoreRecommendations": false,
+"terminal.integrated.mouseWheelScrollSensitivity": 3,
+"terminal.integrated.gpuAcceleration": "off"
 }
