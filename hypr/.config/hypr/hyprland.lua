@@ -476,6 +476,14 @@ for _, ns in ipairs({ "waybar", "wofi", "notifications", "swayosd", "logout_dial
     })
 end
 
+-- slurp's selection overlay: remove it instantly instead of fading it out,
+-- otherwise grim captures the half-faded cyan fill and screenshots come out tinted
+hl.layer_rule({
+    name    = "no-anim-slurp",
+    match   = { namespace = "^selection$" },
+    no_anim = true,
+})
+
 -- Layer rules also return a handle.
 -- local overlayLayerRule = hl.layer_rule({
 --     name  = "no-anim-overlay",
