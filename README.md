@@ -59,7 +59,7 @@ hypr/       → ~/.config/hypr          (hyprland.lua, hypridle, hyprlock, hyprp
 waybar/     → ~/.config/waybar
 kitty/      → ~/.config/kitty
 nvim/       → ~/.config/nvim          (lazy.nvim; plugins install on first launch)
-vscode/     → ~/.config/Code/User/settings.json
+vscode/     → ~/.config/Code/User/{settings,keybindings}.json   (keybindings: Shift+Enter newline in the terminal, for Claude Code)
 wofi/       → ~/.config/wofi
 dunst/      → ~/.config/dunst
 fastfetch/  → ~/.config/fastfetch
