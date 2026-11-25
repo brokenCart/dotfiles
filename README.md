@@ -28,7 +28,7 @@ Arch Linux + Hyprland rice, themed end to end in **Catppuccin Mocha** with a sky
 | | |
 |---|---|
 | **Editors** | VS Code (`$VISUAL`, Catppuccin Mocha sky to match the rice), Neovim |
-| **AI** | Claude Desktop, opencode (desktop app + `opencode` CLI) |
+| **AI** | Claude Desktop, Claude Code (`claude` CLI), opencode (desktop app + `opencode` CLI) |
 | **VCS** | git, GitHub CLI (`gh`) |
 | **Containers** | Docker + buildx + compose |
 | **C / C++** | gcc (base-devel), clang, cmake, ninja, bear, lldb, valgrind |
@@ -93,7 +93,7 @@ sudo pacman -S --needed base-devel git github-cli docker docker-buildx docker-co
   uv python-pip python-pipx ipython python-pytest ruff pyright python-debugpy \
   go gopls delve golangci-lint staticcheck go-tools \
   nodejs npm pnpm typescript eslint prettier opencode-desktop
-yay -S --needed visual-studio-code-bin claude-desktop
+yay -S --needed visual-studio-code-bin claude-desktop claude-code
 go install github.com/bootdotdev/bootdev@latest   # lands in ~/go/bin, which .bashrc adds to PATH
 sudo systemctl enable --now docker
 # optional: run docker without sudo (log out and back in afterwards)
