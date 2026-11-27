@@ -47,7 +47,7 @@ format = "[$symbol]($style) "
 
 [os.symbols]
 Arch = "󰣇"
-Linux = ""
+Linux = ""
 
 [directory]
 style = "bold sky"
@@ -59,15 +59,15 @@ home_symbol = "~"
 format = "[$path]($style)[$read_only]($read_only_style) "
 
 [directory.substitutions]
-"Documents" = "󰈙 "
-"Downloads" = " "
-"Pictures" = " "
-"Music" = "󰝚 "
-".config" = " "
+"Documents" = "󰈙 Documents"
+"Downloads" = " Downloads"
+"Pictures" = " Pictures"
+"Music" = "󰝚 Music"
+".config" = " .config"
 
 # ── Git ──────────────────────────────────────────────────────────
 [git_branch]
-symbol = " "
+symbol = " "
 style = "bold mauve"
 format = "[$symbol$branch(:$remote_branch)]($style) "
 
@@ -91,42 +91,42 @@ deleted = "✘${count}"
 
 # ── Languages (only shown inside matching projects) ──────────────
 [python]
-symbol = " "
+symbol = " "
 style = "yellow"
 format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
 
 [nodejs]
-symbol = " "
+symbol = " "
 style = "green"
 format = "[$symbol($version )]($style)"
 
 [rust]
-symbol = " "
+symbol = " "
 style = "peach"
 format = "[$symbol($version )]($style)"
 
 [golang]
-symbol = " "
+symbol = " "
 style = "sapphire"
 format = "[$symbol($version )]($style)"
 
 [c]
-symbol = " "
+symbol = " "
 style = "blue"
 format = "[$symbol($version(-$name) )]($style)"
 
 [java]
-symbol = " "
+symbol = " "
 style = "red"
 format = "[$symbol($version )]($style)"
 
 [lua]
-symbol = " "
+symbol = " "
 style = "blue"
 format = "[$symbol($version )]($style)"
 
 [docker_context]
-symbol = " "
+symbol = " "
 style = "blue"
 format = "[$symbol$context]($style) "
 
@@ -134,10 +134,10 @@ format = "[$symbol$context]($style) "
 [cmd_duration]
 min_time = 2000
 style = "yellow"
-format = "[ $duration]($style) "
+format = "[ $duration]($style) "
 
 [jobs]
-symbol = " "
+symbol = " "
 style = "bold blue"
 format = "[$symbol$number]($style) "
 
@@ -151,7 +151,7 @@ format = "[$symbol$status]($style) "
 disabled = false
 style = "overlay1"
 time_format = "%H:%M"
-format = "[ $time]($style)"
+format = "[ $time]($style)"
 
 # ── Palette ──────────────────────────────────────────────────────
 [palettes.catppuccin_mocha]
